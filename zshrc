@@ -5,3 +5,4 @@ ZSH=$HOME/gh/robbyrussell/oh-my-zsh
 ZSH_THEME="robbyrussell"
 
 source $ZSH/oh-my-zsh.sh
+source /opt/boxen/env.sh
