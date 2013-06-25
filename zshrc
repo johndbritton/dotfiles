@@ -4,6 +4,9 @@ source /opt/boxen/env.sh
 ZSH=$BOXEN_SRC_DIR/robbyrussell/oh-my-zsh
 
 # Set name of the theme to load.
-ZSH_THEME="robbyrussell"
+ZSH_THEME="fino"
+
+# Enable case sensitive completion
+export CASE_SENSITIVE="true"
 
 source $ZSH/oh-my-zsh.sh
