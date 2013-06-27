@@ -1,5 +1,8 @@
 source /opt/boxen/env.sh
 
+# Remove hub alias set by Boxen
+unalias git
+
 # Path to your oh-my-zsh configuration.
 ZSH=$BOXEN_SRC_DIR/robbyrussell/oh-my-zsh
 
