@@ -16,3 +16,6 @@ export CASE_SENSITIVE="true"
 ZSH_CUSTOM=$BOXEN_SRC_DIR/johndbritton/dotfiles/oh-my-zsh/custom
 
 source $ZSH/oh-my-zsh.sh
+
+# Disable autocorrect
+unsetopt correct_all
