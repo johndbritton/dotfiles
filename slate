@@ -1,49 +1,43 @@
-# From https://github.com/jigish/slate/blob/master/Slate/default.slate
-# This is the default .slate file.
-# If no ~/.slate file exists this is the file that will be used.
+# Useful links:
+# * __Example Configuration__ - https://github.com/jigish/slate/blob/master/Slate/default.slate
+# * http://thume.ca/howto/2012/11/19/using-slate/
+# * http://larryhynes.net/2013/11/simple-slate-configuration.html
 
 config defaultToCurrentScreen true
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
 
-# Resize Bindings
-bind right:alt       resize +10% +0
-bind left:alt        resize -10% +0
-bind up:alt          resize +0   -10%
-bind down:alt        resize +0   +10%
-bind right:ctrl;alt  resize -10% +0 bottom-right
-bind left:ctrl;alt   resize +10% +0 bottom-right
-bind up:ctrl;alt     resize +0   +10% bottom-right
-bind down:ctrl;alt   resize +0   -10% bottom-right
+alias slate_keys cmd;ctrl
 
-# Push Bindings
-bind right:ctrl;cmd  push right bar-resize:screenSizeX/3
-bind left:ctrl;cmd   push left  bar-resize:screenSizeX/3
-bind up:ctrl;cmd     push up    bar-resize:screenSizeY/2
-bind down:ctrl;cmd   push down  bar-resize:screenSizeY/2
+# maximize
+bind m:${slate_keys} move screenOriginX;screenOriginY screenSizeX;screenSizeY
 
-# Nudge Bindings
-bind right:shift;alt nudge +10% +0
-bind left:shift;alt  nudge -10% +0
-bind up:shift;alt    nudge +0   -10%
-bind down:shift;alt  nudge +0   +10%
+# 2/3 screen push
+bind ,:${slate_keys} push left   bar-resize:screenSizeX/3*2
+bind .:${slate_keys} push right  bar-resize:screenSizeX/3*2
 
-# Throw Bindings
-bind 1:ctrl;alt         throw 0 resize
-bind 2:ctrl;alt         throw 1 resize
-bind 3:ctrl;alt         throw 2 resize
-bind right:ctrl;alt;cmd throw right resize
-bind left:ctrl;alt;cmd  throw left  resize
-bind up:ctrl;alt;cmd    throw up    resize
-bind down:ctrl;alt;cmd  throw down  resize
+# 1/2 screen push
+bind up:${slate_keys}     push up    bar-resize:screenSizeY/2
+bind down:${slate_keys}   push down  bar-resize:screenSizeY/2
+bind left:${slate_keys}   push left  bar-resize:screenSizeX/2
+bind right:${slate_keys}  push right bar-resize:screenSizeX/2
 
-# Focus Bindings
-bind right:cmd    focus right
-bind left:cmd     focus left
-bind up:cmd       focus up
-bind down:cmd     focus down
-bind up:cmd;alt   focus behind
-bind down:cmd;alt focus behind
+# 1/3 screen push
+bind ,:shift;${slate_keys} push left   bar-resize:screenSizeX/3
+bind .:shift;${slate_keys} push right  bar-resize:screenSizeX/3
 
-# Window Hints
-bind esc:cmd hint
+# 1/4 screen push
+bind right:shift;${slate_keys} push right bar-resize:screenSizeX/4
+bind left:shift;${slate_keys}  push left  bar-resize:screenSizeX/4
+bind up:shift;${slate_keys}    push up    bar-resize:screenSizeY/4
+bind down:shift;${slate_keys}  push down  bar-resize:screenSizeY/4
+
+# center screen move
+bind /:${slate_keys}       move screenOriginX+screenSizeX/4;screenOriginY screenSizeX/2;screenSizeY
+bind /:shift;${slate_keys} move screenOriginX+screenSizeX/3;screenOriginY screenSizeX/3;screenSizeY
+
+# corners
+bind ]:${slate_keys} move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2
+bind ':${slate_keys} move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2
+bind ;:${slate_keys} move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2
+bind [:${slate_keys} move screenOriginX;screenOriginY screenSizeX/2;screenSizeY/2
