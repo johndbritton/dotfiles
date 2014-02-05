@@ -9,6 +9,12 @@ config resizePercentOf screenSize
 
 alias slate_keys cmd;ctrl
 
+# multiple monitors
+bind 1:${slate_keys} throw 0
+bind 2:${slate_keys} throw 1
+bind 3:${slate_keys} throw 2
+bind 4:${slate_keys} throw 3
+
 # maximize
 bind m:${slate_keys} move screenOriginX;screenOriginY screenSizeX;screenSizeY
 
