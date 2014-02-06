@@ -21,6 +21,9 @@ bind t:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Utilities/Ter
 # relaunch slate
 bind esc:${slate_keys} relaunch
 
+# undo
+bind =:${slate_keys} undo
+
 # maximize
 bind m:${slate_keys} move screenOriginX;screenOriginY screenSizeX;screenSizeY
 
