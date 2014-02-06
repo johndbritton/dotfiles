@@ -15,6 +15,9 @@ bind 2:${slate_keys} throw 1
 bind 3:${slate_keys} throw 2
 bind 4:${slate_keys} throw 3
 
+# global application hotkeys
+bind t:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Utilities/Terminal.app'
+
 # maximize
 bind m:${slate_keys} move screenOriginX;screenOriginY screenSizeX;screenSizeY
 
