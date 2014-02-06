@@ -24,6 +24,9 @@ bind esc:${slate_keys} relaunch
 # undo
 bind =:${slate_keys} undo
 
+# window hints for focus
+bind h:${slate_keys} hint QWERTYUIOP
+
 # maximize
 bind m:${slate_keys} move screenOriginX;screenOriginY screenSizeX;screenSizeY
 
