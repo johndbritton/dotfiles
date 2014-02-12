@@ -59,3 +59,13 @@ bind ]:${slate_keys} move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/
 bind ':${slate_keys} move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2
 bind ;:${slate_keys} move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX/2;screenSizeY/2
 bind [:${slate_keys} move screenOriginX;screenOriginY screenSizeX/2;screenSizeY/2
+
+# 1/2 corners
+bind ]:shift;${slate_keys} move screenOriginX+screenSizeX/4*3;screenOriginY screenSizeX/4;screenSizeY/2
+bind ':shift;${slate_keys} move screenOriginX+screenSizeX/4*3;screenOriginY+screenSizeY/2 screenSizeX/4;screenSizeY/2
+bind ;:shift;${slate_keys} move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX/4;screenSizeY/2
+bind [:shift;${slate_keys} move screenOriginX;screenOriginY screenSizeX/4;screenSizeY/2
+bind ]:shift;alt;${slate_keys} move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/4;screenSizeY/2
+bind ':shift;alt;${slate_keys} move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/4;screenSizeY/2
+bind ;:shift;alt;${slate_keys} move screenOriginX+screenSizeX/4;screenOriginY+screenSizeY/2 screenSizeX/4;screenSizeY/2
+bind [:shift;alt;${slate_keys} move screenOriginX+screenSizeX/4;screenOriginY screenSizeX/4;screenSizeY/2
