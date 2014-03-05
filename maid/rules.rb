@@ -10,4 +10,12 @@ Maid.rules do
       end
     end
   end
+
+  rule 'Archive old downloads' do
+    files('~/Downloads/*').each do |path|
+      if 7.days.since?(accessed_at(path))
+        move(path, '~/Downloads/_outdated')
+      end
+    end
+  end
 end
