@@ -7,7 +7,7 @@ config defaultToCurrentScreen true
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
 
-alias slate_keys cmd;ctrl
+alias slate_keys cmd;ctrl;shift
 
 # multiple monitors
 bind 1:${slate_keys} throw 0
@@ -43,18 +43,18 @@ bind left:${slate_keys}   push left  bar-resize:screenSizeX/2
 bind right:${slate_keys}  push right bar-resize:screenSizeX/2
 
 # 1/3 screen push
-bind ,:shift;${slate_keys} push left   bar-resize:screenSizeX/3
-bind .:shift;${slate_keys} push right  bar-resize:screenSizeX/3
+bind ,:alt;${slate_keys} push left   bar-resize:screenSizeX/3
+bind .:alt;${slate_keys} push right  bar-resize:screenSizeX/3
 
 # 1/4 screen push
-bind right:shift;${slate_keys} push right bar-resize:screenSizeX/4
-bind left:shift;${slate_keys}  push left  bar-resize:screenSizeX/4
-bind up:shift;${slate_keys}    push up    bar-resize:screenSizeY/4
-bind down:shift;${slate_keys}  push down  bar-resize:screenSizeY/4
+bind right:alt;${slate_keys} push right bar-resize:screenSizeX/4
+bind left:alt;${slate_keys}  push left  bar-resize:screenSizeX/4
+bind up:alt;${slate_keys}    push up    bar-resize:screenSizeY/4
+bind down:alt;${slate_keys}  push down  bar-resize:screenSizeY/4
 
 # center screen move
 bind /:${slate_keys}       move screenOriginX+screenSizeX/4;screenOriginY screenSizeX/2;screenSizeY
-bind /:shift;${slate_keys} move screenOriginX+screenSizeX/3;screenOriginY screenSizeX/3;screenSizeY
+bind /:alt;${slate_keys} move screenOriginX+screenSizeX/3;screenOriginY screenSizeX/3;screenSizeY
 
 # corners
 bind ]:${slate_keys} move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY/2
@@ -63,11 +63,11 @@ bind ;:${slate_keys} move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX/
 bind [:${slate_keys} move screenOriginX;screenOriginY screenSizeX/2;screenSizeY/2
 
 # 1/2 corners
-bind ]:shift;${slate_keys} move screenOriginX+screenSizeX/4*3;screenOriginY screenSizeX/4;screenSizeY/2
-bind ':shift;${slate_keys} move screenOriginX+screenSizeX/4*3;screenOriginY+screenSizeY/2 screenSizeX/4;screenSizeY/2
-bind ;:shift;${slate_keys} move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX/4;screenSizeY/2
-bind [:shift;${slate_keys} move screenOriginX;screenOriginY screenSizeX/4;screenSizeY/2
-bind ]:shift;alt;${slate_keys} move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/4;screenSizeY/2
-bind ':shift;alt;${slate_keys} move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/4;screenSizeY/2
-bind ;:shift;alt;${slate_keys} move screenOriginX+screenSizeX/4;screenOriginY+screenSizeY/2 screenSizeX/4;screenSizeY/2
-bind [:shift;alt;${slate_keys} move screenOriginX+screenSizeX/4;screenOriginY screenSizeX/4;screenSizeY/2
+bind p:${slate_keys} move screenOriginX+screenSizeX/4*3;screenOriginY screenSizeX/4;screenSizeY/2
+bind l:${slate_keys} move screenOriginX+screenSizeX/4*3;screenOriginY+screenSizeY/2 screenSizeX/4;screenSizeY/2
+bind k:${slate_keys} move screenOriginX;screenOriginY+screenSizeY/2 screenSizeX/4;screenSizeY/2
+bind o:${slate_keys} move screenOriginX;screenOriginY screenSizeX/4;screenSizeY/2
+bind p:alt;${slate_keys} move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/4;screenSizeY/2
+bind l:alt;${slate_keys} move screenOriginX+screenSizeX/2;screenOriginY+screenSizeY/2 screenSizeX/4;screenSizeY/2
+bind k:alt;${slate_keys} move screenOriginX+screenSizeX/4;screenOriginY+screenSizeY/2 screenSizeX/4;screenSizeY/2
+bind o:alt;${slate_keys} move screenOriginX+screenSizeX/4;screenOriginY screenSizeX/4;screenSizeY/2
