@@ -6,8 +6,15 @@
 config defaultToCurrentScreen true
 config nudgePercentOf screenSize
 config resizePercentOf screenSize
+config modalEscapeKey esc
+config layoutFocusOnActivate true
 
 alias slate_keys cmd;ctrl;shift
+
+layout codeLayout 'Atom' push left bar-resize:screenSizeX/2
+layout codeLayout 'Terminal' push right bar-resize:screenSizeX/2
+
+bind 1:`,${slate_keys} layout codeLayout
 
 # multiple monitors
 bind 1:${slate_keys} throw 0
