@@ -23,6 +23,7 @@ bind 3:${slate_keys} throw 2
 bind 4:${slate_keys} throw 3
 
 # global application hotkeys
+bind c:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Calendar.app'
 bind e:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Atom.app'
 bind i:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Adium.app'
 bind f:${slate_keys} shell path:~/ '/usr/bin/open .'
