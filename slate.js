@@ -3,3 +3,7 @@
 slate.bind("b:cmd;ctrl;shift", function() {
   slate.shell("/usr/bin/open -a '/Applications/Google Chrome.app'", false, '~/')
 });
+
+slate.bind("d:cmd;ctrl;shift", function() {
+  slate.shell("/usr/bin/open 'Dropbox (JDB)'", false, '~/')
+});
