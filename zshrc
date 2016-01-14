@@ -1,21 +1,19 @@
-source /opt/boxen/env.sh
+# Path to src
+SRC=~/src
 
-# Remove hub alias set by Boxen
-unalias git
-
-# Path to your oh-my-zsh configuration.
-ZSH=$BOXEN_SRC_DIR/robbyrussell/oh-my-zsh
+# Path to oh-my-zsh
+ZSH=$SRC/robbyrussell/oh-my-zsh
 
 # Set name of the theme to load.
 ZSH_THEME="johndbritton"
 
+# Load my oh-my-zsh customizations
+ZSH_CUSTOM=$SRC/johndbritton/dotfiles/oh-my-zsh/custom
+
 # Enable case sensitive completion
 export CASE_SENSITIVE="true"
 
-# Load my oh-my-zsh customizations
-ZSH_CUSTOM=$BOXEN_SRC_DIR/johndbritton/dotfiles/oh-my-zsh/custom
-
-source $ZSH/oh-my-zsh.sh
-
 # Disable autocorrect
 unsetopt correct_all
+
+source $ZSH/oh-my-zsh.sh
