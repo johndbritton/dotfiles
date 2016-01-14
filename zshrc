@@ -16,4 +16,7 @@ export CASE_SENSITIVE="true"
 # Disable autocorrect
 unsetopt correct_all
 
+# Enable rbenv
+eval "$(rbenv init -)"
+
 source $ZSH/oh-my-zsh.sh
