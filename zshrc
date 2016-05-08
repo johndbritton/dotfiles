@@ -19,4 +19,7 @@ unsetopt correct_all
 # Enable rbenv
 eval "$(rbenv init -)"
 
+# Enable nodenv
+eval "$(nodenv init -)"
+
 source $ZSH/oh-my-zsh.sh
