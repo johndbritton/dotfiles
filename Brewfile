@@ -1,3 +1,76 @@
+tap 'caskroom/cask'
+tap 'github/bootstrap'
+tap 'homebrew/bundle'
+tap 'homebrew/core'
+tap 'homebrew/services'
+tap 'homebrew/versions'
+
+brew 'autoconf'
+brew 'xz'
+brew 'automake'
+brew 'pkg-config'
+brew 'libpng'
+brew 'freetype'
+brew 'fontconfig'
+brew 'pixman'
+brew 'gettext'
+brew 'libffi'
+brew 'pcre'
+brew 'glib'
+brew 'cairo'
+brew 'git'
+brew 'carthage'
+brew 'cmake'
+brew 'cocoapods'
+brew 'libsodium'
+brew 'zeromq'
+brew 'czmq'
+brew 'libtool'
+brew 'gobject-introspection'
+brew 'icu4c'
+brew 'harfbuzz'
+brew 'pango'
+brew 'jpeg'
+brew 'libtiff'
+brew 'fontforge'
+brew 'gdbm'
+brew 'gifsicle'
+brew 'gmp'
+brew 'gnupg'
+brew 'heroku'
+brew 'imagemagick'
+brew 'jansson'
+brew 'jemalloc'
+brew 'openssl'
+brew 'lastpass-cli'
+brew 'launchdns'
+brew 'libevent'
+brew 'libgpg-error'
+brew 'libgcrypt'
+brew 'readline'
+brew 'sqlite'
+brew 'libgda'
+brew 'libksba'
+brew 'libyaml'
+brew 'llvm', args: ['with-clang']
+brew 'mas'
+brew 'md5sha1sum'
+brew 'memcached'
+brew 'mercurial'
+brew 'nginx'
+brew 'node'
+brew 'node-build'
+brew 'nodenv'
+brew 'postgresql'
+brew 'ruby-build'
+brew 'rbenv'
+brew 'redis'
+brew 'terminal-notifier'
+brew 'tree'
+brew 'watch'
+brew 'wget'
+brew 'zsh'
+
 cask '1password'
 cask 'adium'
 cask 'airdisplay'
@@ -51,3 +124,18 @@ cask 'vlc'
 cask 'vmware-fusion'
 cask 'webtorrent'
 cask 'zoomus'
+
+mas '1Password', id: 443987910
+mas 'Clocks', id: 414554506
+mas 'Keynote', id: 409183694
+mas 'Kindle', id: 405399194
+mas 'Padlock', id: 415667090
+mas 'Twitter', id: 409789998
+mas 'Pixelmator', id: 407963104
+mas 'Shush', id: 496437906
+mas 'Numbers', id: 409203825
+mas 'Xcode', id: 497799835
+mas 'Pages', id: 409201541
+mas 'HazeOver', id: 430798174
+mas 'Yoink', id: 457622435
+mas 'Orangered Notifier', id: 468366517
