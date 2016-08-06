@@ -11,3 +11,5 @@
 	name = John Britton
 [color]
 	ui = true
+[credential]
+	helper = osxkeychain
