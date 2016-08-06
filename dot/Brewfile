@@ -75,7 +75,6 @@ brew 'xz'
 brew 'zeromq'
 brew 'zsh'
 
-cask 'adium'
 cask 'airdisplay'
 cask 'airflow'
 cask 'arq'
