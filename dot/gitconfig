@@ -1,0 +1,13 @@
+[core]
+	autocrlf = input
+	editor = atom -w
+[alias]
+	branch-name = rev-parse --abbrev-ref HEAD
+	pub = !git push -u origin $(git branch-name)
+[push]
+	default = simple
+[user]
+	email = public@johndbritton.com
+	name = John Britton
+[color]
+	ui = true
