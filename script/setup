@@ -37,3 +37,12 @@ for f in $(ls -d ~/src/johndbritton/dotfiles/dot/*); do ln -sfn $f ~/.$(basename
 
 # Symlink files/* into home directory as regular files
 for f in $(ls -d ~/src/johndbritton/dotfiles/files/*); do ln -sfn $f ~/$(basename $f); done
+
+# Set up oh-my-zsh
+mkdir -p ~/src/robbyrussell/oh-my-zsh
+cd ~/src/robbyrussell/oh-my-zsh
+if [ -d .git ]; then
+  git pull
+else
+  git clone https://github.com/robbyrussell/oh-my-zsh ~/src/robbyrussell/oh-my-zsh
+fi;

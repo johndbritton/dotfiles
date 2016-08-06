@@ -8,7 +8,7 @@ ZSH=$SRC/robbyrussell/oh-my-zsh
 ZSH_THEME="johndbritton"
 
 # Load my oh-my-zsh customizations
-ZSH_CUSTOM=$SRC/johndbritton/dotfiles/oh-my-zsh/custom
+ZSH_CUSTOM=~/.oh-my-zsh/custom
 
 # Enable case sensitive completion
 export CASE_SENSITIVE="true"
