@@ -71,7 +71,6 @@ brew 'xz'
 brew 'zeromq'
 brew 'zsh'
 
-cask '1password'
 cask 'adium'
 cask 'airdisplay'
 cask 'airflow'
