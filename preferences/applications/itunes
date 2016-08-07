@@ -1,0 +1,2 @@
+# Disable keyboard media keys
+launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/null
