@@ -25,3 +25,6 @@ for f in $(ls -d ~/.dotfiles/dot/*); do ln -sfn $f ~/.$(basename $f); done
 
 # Symlink files/* into home directory as regular files
 for f in $(ls -d ~/.dotfiles/files/*); do ln -sfn $f ~/$(basename $f); done
+
+# Set preferences using defaults write
+for f in $(find ~/.dotfiles/preferences -type f); do source $f; done
