@@ -26,6 +26,7 @@ bind 4:${slate_keys} throw 3
 bind e:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Atom.app'
 bind i:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Adium.app'
 bind f:${slate_keys} shell path:~/ '/usr/bin/open .'
+bind s:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Slack.app'
 bind t:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Utilities/Terminal.app'
 
 # relaunch slate
