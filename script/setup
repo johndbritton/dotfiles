@@ -1,42 +1,11 @@
 #!/bin/bash
 set -e
 
-# Prepare dotfiles directory
-mkdir -p ~/src/johndbritton/dotfiles
-cd ~/src/johndbritton/dotfiles
-
-# Update dotfiles from GitHub
-if [ -d .git ]; then
-  git pull
-else
-  curl -#L https://github.com/johndbritton/dotfiles/tarball/master | tar -xzv --strip-components 1
-fi;
-
-# Symlink Brewfile before strap runs for the first time
-ln -sfn ~/src/johndbritton/dotfiles/dot/Brewfile ~/.Brewfile
-
-# Bootstrap the machine
-mkdir -p /tmp/strap
-cd /tmp/strap
-curl -#L https://github.com/MikeMcQuaid/strap/tarball/master | tar -xzv --strip-components 1
-/tmp/strap/bin/strap.sh
-cd
-rm -rf /tmp/strap
-
-# Make sure dotfiles is a git repository
-cd ~/src/johndbritton/dotfiles
-if ! [ -d .git ]; then
-  cd &&
-  rm -rf ~/src/johndbritton/dotfiles &&
-  mkdir -p ~/src/johndbritton/dotfiles &&
-  git clone https://github.com/johndbritton/dotfiles ~/src/johndbritton/dotfiles
-fi;
-
 # Symlink dot/* into home directory as hidden files
-for f in $(ls -d ~/src/johndbritton/dotfiles/dot/*); do ln -sfn $f ~/.$(basename $f); done
+for f in $(ls -d ~/.dotfiles/dot/*); do ln -sfn $f ~/.$(basename $f); done
 
 # Symlink files/* into home directory as regular files
-for f in $(ls -d ~/src/johndbritton/dotfiles/files/*); do ln -sfn $f ~/$(basename $f); done
+for f in $(ls -d ~/.dotfiles/files/*); do ln -sfn $f ~/$(basename $f); done
 
 # Set up oh-my-zsh
 mkdir -p ~/src/robbyrussell/oh-my-zsh
