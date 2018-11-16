@@ -3,7 +3,6 @@ tap 'github/bootstrap'
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
-tap 'homebrew/versions'
 
 brew 'autoconf'
 brew 'automake'
