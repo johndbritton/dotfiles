@@ -91,7 +91,6 @@ cask 'fantastical'
 cask 'firefox'
 cask 'flux'
 cask 'gfxcardstatus'
-cask 'gmail-notifr'
 cask 'google-chrome'
 cask 'grandperspective'
 cask 'hackhands'
@@ -133,6 +132,7 @@ mas 'Affinity Photo', id: 824183456
 mas 'Amphetamine', id: 937984704
 mas 'Clocks', id: 414554506
 mas 'Degrees Weather', id: 430173763
+mas 'Mail Notifr', id: 808154494
 mas 'HazeOver', id: 430798174
 mas 'Keynote', id: 409183694
 mas 'Kindle', id: 405399194
