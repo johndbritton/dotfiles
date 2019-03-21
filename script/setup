@@ -1,17 +1,27 @@
-#!/bin/bash
+#!/bin/zsh
 set -e
+
+# Set zsh as default shell
+sudo dscl . -create /Users/$USER UserShell $(brew --prefix)/bin/zsh
+
+# Set up prezto
+mkdir -p ~/src/sorin-ionescu/prezto
+cd ~/src/sorin-ionescu/prezto
+if [ -d .git ]; then
+  git pull
+else
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/src/sorin-ionescu/prezto
+fi;
+
+ln -sfn ~/src/sorin-ionescu/prezto ~/.zprezto
+
+setopt EXTENDED_GLOB
+for rcfile in ~/src/sorin-ionescu/prezto/runcoms/^README.md(.N); do
+  ln -sfn $rcfile ~/.${rcfile:t}
+done
 
 # Symlink dot/* into home directory as hidden files
 for f in $(ls -d ~/.dotfiles/dot/*); do ln -sfn $f ~/.$(basename $f); done
 
 # Symlink files/* into home directory as regular files
 for f in $(ls -d ~/.dotfiles/files/*); do ln -sfn $f ~/$(basename $f); done
-
-# Set up oh-my-zsh
-mkdir -p ~/src/robbyrussell/oh-my-zsh
-cd ~/src/robbyrussell/oh-my-zsh
-if [ -d .git ]; then
-  git pull
-else
-  git clone https://github.com/robbyrussell/oh-my-zsh ~/src/robbyrussell/oh-my-zsh
-fi;
