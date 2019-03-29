@@ -129,6 +129,19 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+
+    hyperCustomTouchbar: [
+      {
+        label: 'git',
+        options: [
+          { label: 'diff', command: 'git diff' },
+          { label: 'status', command: 'git status' },
+          { label: 'log', command: 'git log' },
+          { label: 'pub', command: 'git pub' },
+          { label: 'clone', command: 'git clone ', prompt: true },
+        ]
+      },
+    ],
   },
 
   // a list of plugins to fetch and install from npm
@@ -137,7 +150,13 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyper-solarized-dark"],
+  plugins: [
+    "hyper-solarized-dark",
+    "hypercwd",
+    "hyperterm-dibdabs",
+    "hyperlinks",
+    "hyper-custom-touchbar"
+  ],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
