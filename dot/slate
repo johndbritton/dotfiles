@@ -27,8 +27,7 @@ bind e:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Atom.app'
 bind i:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Adium.app'
 bind f:${slate_keys} shell path:~/ '/usr/bin/open .'
 bind s:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Slack.app'
-bind t:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Utilities/Terminal.app'
-bind t:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Utilities/Terminal.app'
+bind t:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Hyper.app'
 bind z:${slate_keys} shell path:~/ '/usr/bin/open zoommtg://github.zoom.us/join?action=join&confno=9914373072'
 
 # relaunch slate
