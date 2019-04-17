@@ -1,0 +1,16 @@
+#!/bin/zsh
+set -e
+
+defaults write com.apple.systemuiserver dontAutoLoad -array \
+  "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
+  "/System/Library/CoreServices/Menu Extras/User.menu"
+
+defaults write com.apple.systemuiserver menuExtras -array \
+  "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
+  "/System/Library/CoreServices/Menu Extras/Battery.menu" \
+  "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
+  "/System/Library/CoreServices/Menu Extras/Clock.menu" \
+  "/System/Library/CoreServices/Menu Extras/Displays.menu" \
+  "/System/Library/CoreServices/Menu Extras/Volume.menu"
+
+killall SystemUIServer
