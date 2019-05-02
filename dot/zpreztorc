@@ -39,7 +39,8 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'prompt' \
   'ruby' \
-  'python'
+  'python' \
+  'node'
 
 #
 # Autosuggestions
