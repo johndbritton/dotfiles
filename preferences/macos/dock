@@ -14,3 +14,5 @@ defaults write com.apple.dock autohide -bool true
 
 # Effectively disable the Dock by setting a large auto-hide delay
 defaults write com.apple.dock autohide-delay -float 999999999
+
+killall Dock
