@@ -21,9 +21,6 @@
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
                                     }
                                 },
                                 "to": [
@@ -38,11 +35,7 @@
                                 "to_if_alone": [
                                     {
                                         "key_code": "escape",
-                                        "modifiers": {
-                                            "optional": [
-                                                "any"
-                                            ]
-                                        }
+                                        "modifiers": "any"
                                     }
                                 ],
                                 "type": "basic"
