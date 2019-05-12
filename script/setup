@@ -16,7 +16,7 @@ fi;
 ln -sfn ~/src/sorin-ionescu/prezto ~/.zprezto
 
 setopt EXTENDED_GLOB
-for rcfile in ~/src/sorin-ionescu/prezto/runcoms/^README.md(.N); do
+for rcfile in ~/src/sorin-ionescu/prezto/runcoms/^(README.md|zshrc)(.N); do
   ln -sfn $rcfile ~/.${rcfile:t}
 done
 

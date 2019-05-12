@@ -5,8 +5,6 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-for f in ~/.zsh/*; do source $f; done
-
 #
 # General
 #
