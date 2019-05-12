@@ -5,6 +5,7 @@
 [alias]
 	branch-name = rev-parse --abbrev-ref HEAD
 	pub = !git push -u origin $(git branch-name)
+	password = !reset-github-password
 [push]
 	default = simple
 [user]
