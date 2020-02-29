@@ -39,7 +39,7 @@ brew 'libsodium'
 brew 'libtiff'
 brew 'libtool'
 brew 'libyaml'
-brew 'llvm', args: ['with-clang']
+brew 'llvm'
 brew 'mas'
 brew 'md5sha1sum'
 brew 'memcached'
