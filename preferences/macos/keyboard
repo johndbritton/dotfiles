@@ -5,10 +5,10 @@ PRO=632
 ERGO=591
 
 foreach keyboard ($AIR $PRO $ERGO)
-  /usr/libexec/PlistBuddy -c "Add com.apple.keyboard.modifiermapping.1452-${keyboard}-0 array" ~/Library/Preferences/ByHost/.GlobalPreferences.*.plist
-  /usr/libexec/PlistBuddy -c "Add :com.apple.keyboard.modifiermapping.1452-${keyboard}-0: dict" ~/Library/Preferences/ByHost/.GlobalPreferences.*.plist
-  /usr/libexec/PlistBuddy -c "Add com.apple.keyboard.modifiermapping.1452-${keyboard}-0:0:HIDKeyboardModifierMappingDst integer -1" ~/Library/Preferences/ByHost/.GlobalPreferences.*.plist
-  /usr/libexec/PlistBuddy -c "Add com.apple.keyboard.modifiermapping.1452-${keyboard}-0:0:HIDKeyboardModifierMappingSrc integer 0" ~/Library/Preferences/ByHost/.GlobalPreferences.*.plist
+  /usr/libexec/PlistBuddy -c "Add com.apple.keyboard.modifiermapping.1452-${keyboard}-0 array" ~/Library/Preferences/ByHost/.GlobalPreferences.*.plist || true
+  /usr/libexec/PlistBuddy -c "Add :com.apple.keyboard.modifiermapping.1452-${keyboard}-0: dict" ~/Library/Preferences/ByHost/.GlobalPreferences.*.plist || true
+  /usr/libexec/PlistBuddy -c "Add com.apple.keyboard.modifiermapping.1452-${keyboard}-0:0:HIDKeyboardModifierMappingDst integer -1" ~/Library/Preferences/ByHost/.GlobalPreferences.*.plist || true
+  /usr/libexec/PlistBuddy -c "Add com.apple.keyboard.modifiermapping.1452-${keyboard}-0:0:HIDKeyboardModifierMappingSrc integer 0" ~/Library/Preferences/ByHost/.GlobalPreferences.*.plist || true
 end
 
 echo 'Configured keyboard preferences'
