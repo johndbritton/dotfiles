@@ -28,3 +28,5 @@ sudo defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool t
 sudo defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 # Follow the keyboard focus while zoomed in
 sudo defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+
+echo 'Configured Core preferences'

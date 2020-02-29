@@ -16,3 +16,5 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 999999999
 
 killall Dock
+
+echo 'Configured Dock preferences'

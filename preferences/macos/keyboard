@@ -10,3 +10,5 @@ foreach keyboard ($AIR $PRO $ERGO)
   /usr/libexec/PlistBuddy -c "Add com.apple.keyboard.modifiermapping.1452-${keyboard}-0:0:HIDKeyboardModifierMappingDst integer -1" ~/Library/Preferences/ByHost/.GlobalPreferences.*.plist
   /usr/libexec/PlistBuddy -c "Add com.apple.keyboard.modifiermapping.1452-${keyboard}-0:0:HIDKeyboardModifierMappingSrc integer 0" ~/Library/Preferences/ByHost/.GlobalPreferences.*.plist
 end
+
+echo 'Configured keyboard preferences'

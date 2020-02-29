@@ -14,3 +14,5 @@ defaults write com.apple.systemuiserver menuExtras -array \
   "/System/Library/CoreServices/Menu Extras/Volume.menu"
 
 killall SystemUIServer
+
+echo 'Configured menubar preferences'
