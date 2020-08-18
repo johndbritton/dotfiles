@@ -1,5 +1,6 @@
 brew 'autoconf'
 brew 'automake'
+brew 'bat'
 brew 'cairo'
 brew 'carthage'
 brew 'cmake'
