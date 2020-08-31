@@ -11,9 +11,12 @@
 [user]
 	email = public@johndbritton.com
 	name = John Britton
+	signingkey = E915C4F25FD858BB
 [color]
 	ui = true
 [credential]
 	helper = osxkeychain
 [github]
 	user = johndbritton
+[commit]
+	gpgsign = true
