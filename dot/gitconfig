@@ -20,3 +20,5 @@
 	user = johndbritton
 [commit]
 	gpgsign = true
+[pull]
+	rebase = false
