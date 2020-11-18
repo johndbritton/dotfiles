@@ -1,0 +1,1 @@
+alias dotfiles='. dotfiles'
