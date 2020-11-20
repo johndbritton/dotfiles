@@ -9,5 +9,5 @@ elif [ $1 = 'reload' ]; then
 elif [ $1 = 'setup' ]; then
   (~/.dotfiles/script/setup)
 elif [ $1 = 'update' ]; then
-  (git -C ~/.dotfiles pull)
+  (git -C ~/.dotfiles pull --rebase --autostash)
 fi
