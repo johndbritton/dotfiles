@@ -2,10 +2,12 @@
 
 if [ $# -eq 0 ]; then
   cd ~/.dotfiles
+elif [ $1 = 'edit' ]; then
+  (${VISUAL:-${EDITOR:-vi}} "~/.dotfiles")
 elif [ $1 = 'reload' ]; then
   . ~/.zshrc
 elif [ $1 = 'setup' ]; then
-  $(~/.dotfiles/script/setup)
-elif [ $1 = 'edit' ]; then
-  $(${VISUAL:-${EDITOR:-vi}} "~/.dotfiles")
+  (~/.dotfiles/script/setup)
+elif [ $1 = 'update' ]; then
+  (git -C ~/.dotfiles pull)
 fi
