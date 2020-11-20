@@ -28,3 +28,8 @@ for f in $(ls -d ~/.dotfiles/files/*); do ln -sfn $f ~/$(basename $f); done
 
 # Set preferences using defaults write
 for f in $(find ~/.dotfiles/preferences -type f); do source $f; done
+
+# If running outside of the context of Strap
+if [ -z "$STRAP_GITHUB_USER" ]; then
+  script/strap-after-setup
+fi
