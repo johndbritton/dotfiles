@@ -2,6 +2,8 @@
 
 if [ $# -eq 0 ]; then
   cd ~/.dotfiles
+elif [ $1 = 'reload' ]; then
+  . ~/.zshrc
 elif [ $1 = 'run' ]; then
   $(~/.dotfiles/script/setup)
 elif [ $1 = 'edit' ]; then
