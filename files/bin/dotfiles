@@ -10,4 +10,12 @@ elif [ $1 = 'reload' ]; then
   . ~/.zshrc
 elif [ $1 = 'setup' ]; then
   (~/.dotfiles/script/setup)
+else
+  echo 'Usage:'
+  echo '  dotfiles'
+  echo '  dotfiles edit'
+  echo '  dotfiles help'
+  echo '  dotfiles pull'
+  echo '  dotfiles reload'
+  echo '  dotfiles setup'
 fi
