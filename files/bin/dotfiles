@@ -7,5 +7,5 @@ elif [ $1 = 'reload' ]; then
 elif [ $1 = 'setup' ]; then
   $(~/.dotfiles/script/setup)
 elif [ $1 = 'edit' ]; then
-  $(atom ~/.dotfiles)
+  $(${VISUAL:-${EDITOR:-vi}} "~/.dotfiles")
 fi

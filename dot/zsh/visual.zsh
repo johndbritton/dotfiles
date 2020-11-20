@@ -1,0 +1,1 @@
+export VISUAL="atom"
