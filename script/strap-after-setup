@@ -1,0 +1,2 @@
+# Ensure preferred ruby version is installed
+rbenv install -s $(cat ~/.rbenv/version)
