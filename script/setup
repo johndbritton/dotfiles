@@ -31,5 +31,6 @@ for f in $(find ~/.dotfiles/preferences -type f); do source $f; done
 
 # If running outside of the context of Strap
 if [ -z "$STRAP_GITHUB_USER" ]; then
+  brew bundle check --global || brew bundle --global
   script/strap-after-setup
 fi
