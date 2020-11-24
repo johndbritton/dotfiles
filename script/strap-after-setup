@@ -1,5 +1,6 @@
 #!/bin/zsh
 set -e
 
-# Ensure preferred ruby version is installed
+# Ensure preferred language versions are installed
 rbenv install -s $(cat ~/.rbenv/version)
+pyenv install -s $(cat ~/.pyenv/version)
