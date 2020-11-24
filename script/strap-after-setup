@@ -4,3 +4,4 @@ set -e
 # Ensure preferred language versions are installed
 rbenv install -s $(cat ~/.rbenv/version)
 pyenv install -s $(cat ~/.pyenv/version)
+nodenv install -s $(cat ~/.nodenv/version)
