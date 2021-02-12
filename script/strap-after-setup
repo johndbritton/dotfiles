@@ -1,6 +1,9 @@
 #!/bin/zsh
 set -e
 
+# Accept the Xcode license
+sudo xcodebuild -license accept
+
 # Ensure preferred language versions are installed
 rbenv install -s $(cat ~/.rbenv/version)
 # Disabling until https://github.com/pyenv/pyenv/issues/1643 is resolved
