@@ -73,6 +73,7 @@ brew 'zeromq'
 brew 'zlib'
 brew 'zsh'
 
+cask 'abyssoft-teleport'
 cask 'airflow'
 cask 'arq'
 cask 'astropad'
