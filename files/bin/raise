@@ -1,0 +1,9 @@
+#!/bin/zsh
+
+if [ $# -eq 0 ]; then
+  cd ~/src/raisedevs/raisedev
+elif [ $1 = 'edit' ]; then
+  (${VISUAL:-${EDITOR:-vi}} "~/src/raisedevs/raisedev")
+else
+  ~/src/raisedevs/raisedev/raise "$@"
+fi
