@@ -1,0 +1,1 @@
+alias atom='atom-nightly'
