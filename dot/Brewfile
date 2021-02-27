@@ -134,6 +134,9 @@ cask 'vmware-fusion'
 cask 'webtorrent'
 cask 'zoomus'
 
+tap 'homebrew/cask-versions'
+cask 'atom-nightly'
+
 mas '1Password 7', id: 1333542190
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
