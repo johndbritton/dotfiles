@@ -32,6 +32,10 @@ bind s:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Slack.app'
 bind t:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Hyper.app'
 bind z:${slate_keys} shell path:~/ '/usr/bin/open zoommtg://github.zoom.us/join?action=join&confno=9914373072'
 
+# airpods hotkeys
+bind pageUp:${slate_keys} shell path:~/ '~/bin/bluetooth connect airpods'
+bind pageDown:${slate_keys} shell path:~/ '~/bin/bluetooth disconnect airpods'
+
 # relaunch slate
 bind esc:${slate_keys} relaunch
 
