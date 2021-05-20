@@ -1,6 +1,7 @@
 brew 'autoconf'
 brew 'automake'
 brew 'bat'
+brew 'bluetoothconnector'
 brew 'cairo'
 brew 'carthage'
 brew 'cmake'
