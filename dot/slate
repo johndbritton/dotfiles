@@ -23,14 +23,13 @@ bind 3:${slate_keys} throw 2
 bind 4:${slate_keys} throw 3
 
 # global application hotkeys
-bind b:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Safari.app'
-bind c:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Fantastical.app'
-bind e:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Atom.app'
-bind i:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Adium.app'
+bind b:${slate_keys} shell path:~/ '/usr/bin/open -a Safari'
+bind c:${slate_keys} shell path:~/ '/usr/bin/open -a Fantastical'
+bind e:${slate_keys} shell path:~/ '/usr/bin/open -a Atom Nightly'
 bind f:${slate_keys} shell path:~/ '/usr/bin/open .'
-bind s:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Slack.app'
-bind t:${slate_keys} shell path:~/ '/usr/bin/open -a /Applications/Hyper.app'
-bind z:${slate_keys} shell path:~/ '/usr/bin/open zoommtg://github.zoom.us/join?action=join&confno=9914373072'
+bind t:${slate_keys} shell path:~/ '/usr/bin/open -a Terminal'
+bind s:${slate_keys} shell path:~/ '/usr/bin/open -a Slack'
+bind x:${slate_keys} shell path:~/ '/usr/bin/open -a Spotify'
 
 # airpods hotkeys
 bind pageUp:${slate_keys} shell path:~/ '~/bin/bluetooth connect airpods'
