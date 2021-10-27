@@ -15,5 +15,5 @@ fi
 # Load zsh customizations
 for f in ~/.zsh/*; do source $f; done
 
-# Add ~/bin to PATH
-export PATH="$HOME/bin:$PATH"
+# Add ~/bin and /opt/homebrew/bin to PATH
+export PATH="$HOME/bin:/opt/homebrew/bin:$PATH"
