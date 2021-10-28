@@ -135,7 +135,7 @@ cask 'visual-studio-code'
 cask 'vlc'
 cask 'vmware-fusion'
 cask 'webtorrent'
-cask 'zoomus'
+cask 'zoom'
 
 tap 'homebrew/cask-versions'
 cask 'atom-nightly'
