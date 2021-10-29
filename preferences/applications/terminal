@@ -1,0 +1,6 @@
+if [[ $(defaults read com.apple.Terminal "Default Window Settings") != "Adaptive" ]]; then
+  open ~/.dotfiles/assets/terminal/Adaptive.terminal
+fi
+
+defaults write com.apple.Terminal "Default Window Settings" -string "Adaptive"
+defaults write com.apple.Terminal "Startup Window Settings" -string "Adaptive"
