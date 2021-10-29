@@ -5,6 +5,7 @@ declare -a apps=(
   "Bartender 4"
   "Bear"
   "ExpressVPN"
+  "Shifty"
   "Slate"
   "teleport"
   "Yoink"
