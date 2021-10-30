@@ -248,7 +248,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "illumination_increment"
+                            "key_code": "f13"
                         }
                     ]
                 },
