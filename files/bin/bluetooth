@@ -1,9 +1,9 @@
 #!/bin/zsh
 
 if [ $1 = 'connect' ] && [ $2 = 'airpods' ]; then
-  BluetoothConnector --connect c4-14-11-2b-46-ba
+  blueutil --connect 'c4-14-11-2b-46-ba'
 elif [ $1 = 'disconnect' ] && [ $2 = 'airpods' ]; then
-  BluetoothConnector --disconnect --notify c4-14-11-2b-46-ba
+  blueutil --disconnect 'c4-14-11-2b-46-ba' --wait-disconnect 'c4-14-11-2b-46-ba'
 else
   echo 'Usage:'
   echo '  bluetooth connect <device>'
