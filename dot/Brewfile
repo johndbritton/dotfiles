@@ -135,6 +135,7 @@ tap 'homebrew/cask-versions'
 cask 'atom-nightly'
 
 mas '1Password 7', id: 1333542190
+mas 'Adguard for Safari', id: 1440147259
 mas 'Affinity Designer', id: 824171161
 mas 'Affinity Photo', id: 824183456
 mas 'Amphetamine', id: 937984704
