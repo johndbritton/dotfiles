@@ -145,5 +145,6 @@ mas 'Kindle', id: 405399194
 mas 'Numbers', id: 409203825
 mas 'Pages', id: 409201541
 mas 'Speedtest', id: 1153157709
+mas 'Tailscale', id: 1475387142
 mas 'Xcode', id: 497799835
 mas 'Yoink', id: 457622435
