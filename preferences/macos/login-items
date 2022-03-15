@@ -12,7 +12,6 @@ declare -a apps=(
   "Shifty"
   "Slate"
   "Tailscale"
-  "teleport"
   "Yoink"
 )
 
