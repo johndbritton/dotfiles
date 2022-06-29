@@ -8,6 +8,7 @@ declare -a apps=(
   "Choosy"
   "ExpressVPN"
   "Gitify"
+  "Home Assistant"
   "Homie"
   "Itsycal"
   "Shifty"
