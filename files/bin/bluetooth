@@ -2,8 +2,12 @@
 
 if [ $1 = 'connect' ] && [ $2 = 'airpods' ]; then
   blueutil --connect 'c4-14-11-2b-46-ba'
+elif [ $1 = 'connect' ] && [ $2 = 'jdb-air' ]; then
+  blueutil --connect '38-f9-d3-5e-e3-7b'
 elif [ $1 = 'disconnect' ] && [ $2 = 'airpods' ]; then
   blueutil --disconnect 'c4-14-11-2b-46-ba' --wait-disconnect 'c4-14-11-2b-46-ba'
+elif [ $1 = 'disconnect' ] && [ $2 = 'jdb-air' ]; then
+  blueutil --disconnect '38-f9-d3-5e-e3-7b' --wait-disconnect '38-f9-d3-5e-e3-7b'
 else
   echo 'Usage:'
   echo '  bluetooth connect <device>'
