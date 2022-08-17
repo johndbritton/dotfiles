@@ -29,4 +29,7 @@ sudo defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262
 # Follow the keyboard focus while zoomed in
 sudo defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
+# Disable user interface sound effects
+defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0
+
 echo 'Configured Core preferences'
