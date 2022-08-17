@@ -25,3 +25,5 @@
 	rebase = false
 [init]
 	defaultBranch = main
+[merge]
+  ff = no
