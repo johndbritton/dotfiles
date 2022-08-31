@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 if [ $1 = 'toggle' ] && [ $2 = 'study-light' ]; then
-  hass-cli service call homeassistant.toggle --arguments entity_id=light.study_light
+  hass-cli service call light.toggle --arguments entity_id=light.study_light,transition=15
 else
   echo 'Usage:'
   echo '  office toggle <device>'
