@@ -63,6 +63,12 @@ hs.hotkey.bind(shift_hyper, "u", function()
   hs.execute("bluetooth disconnect jdb-air", true)
 end)
 
+-- Home Assistant
+
+hs.hotkey.bind(hyper, "l", function()
+  hs.execute("home-assistant toggle study-light", true)
+end)
+
 -- Multiple Monitors
 
 function moveWindowToDisplay(d)
