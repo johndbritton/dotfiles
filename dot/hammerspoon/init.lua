@@ -69,29 +69,37 @@ function moveWindowToDisplay(d)
   return function()
     local displays = hs.screen.allScreens()
     local win = hs.window.focusedWindow()
-    win:moveToScreen(displays[d], false, true)
+    if(win:isFullScreen())
+    then
+      win:setFullScreen(false)
+      hs.timer.doAfter(.6, function()
+        win:moveToScreen(displays[d], false, true)
+        win:setFullScreen(true)
+      end)
+    else
+      win:moveToScreen(displays[d], false, true)
+    end
   end
 end
 
 hs.hotkey.bind(hyper, "1", moveWindowToDisplay(1))
 hs.hotkey.bind(hyper, "2", moveWindowToDisplay(2))
 
-function fullScreenToDisplay(d)
+-- Full Screen
+
+function toggleFullScreen()
   return function()
-    local displays = hs.screen.allScreens()
     local win = hs.window.focusedWindow()
-    win:setFullScreen(false)
-    hs.timer.doAfter(.6, function()
-      win:moveToScreen(displays[d], false, true)
-    end)
-    hs.timer.doAfter(.6, function()
+    if(win:isFullScreen())
+    then
+      win:setFullScreen(false)
+    else
       win:setFullScreen(true)
-    end)
+    end
   end
 end
 
-hs.hotkey.bind(shift_hyper, "1", fullScreenToDisplay(1))
-hs.hotkey.bind(shift_hyper, "2", fullScreenToDisplay(2))
+hs.hotkey.bind(shift_hyper, "m", toggleFullScreen())
 
 -- Window Management
 
