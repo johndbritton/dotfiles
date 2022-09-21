@@ -63,6 +63,16 @@ hs.hotkey.bind(shift_hyper, "u", function()
   hs.execute("bluetooth disconnect jdb-air", true)
 end)
 
+-- Speakers
+
+hs.hotkey.bind(hyper, "a", function()
+  hs.execute("audio-out headphones", true)
+end)
+
+hs.hotkey.bind(hyper, "z", function()
+  hs.execute("audio-out speakers", true)
+end)
+
 -- Home Assistant
 
 hs.hotkey.bind(hyper, "l", function()

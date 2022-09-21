@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+if [ $1 = 'speakers' ]; then
+  SwitchAudioSource -s "Desk"
+elif [ $1 = 'headphones' ]; then
+  SwitchAudioSource -s "External Headphones"
+else
+  echo 'Usage:'
+  echo '  audio-out'
+  echo '  audio-out speakers'
+  echo '  audio-out headphones'
+fi
