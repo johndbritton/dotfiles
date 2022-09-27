@@ -87,6 +87,7 @@ brew 'heroku'
 tap 'nodenv/nodenv'
 brew 'nodenv/nodenv/nodenv-default-packages'
 
+cask '1password'
 cask 'abyssoft-teleport'
 cask 'airflow'
 cask 'arq'
