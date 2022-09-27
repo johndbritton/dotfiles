@@ -1,6 +1,7 @@
 #!/bin/zsh
 
 declare -a apps=(
+  "1Password"
   "Amphetamine"
   "Bartender 4"
   "Bear"
