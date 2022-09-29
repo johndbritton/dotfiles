@@ -6,6 +6,7 @@ hs.dockIcon(false)
 hs.menuIcon(true)
 hs.consoleOnTop(true)
 hs.uploadCrashData(false)
+hs.screen.strictScreenInDirection = true
 
 -- Key Combos
 
@@ -81,27 +82,54 @@ end)
 
 -- Multiple Monitors
 
-function moveWindowToDisplay(d)
+function moveWindowToDisplay(display)
   return function()
-    local displays = hs.screen.allScreens()
+    if(display() == nil)
+    then
+      return
+    end
+
     local win = hs.window.focusedWindow()
     if(win:isFullScreen())
     then
       win:setFullScreen(false)
       hs.timer.doAfter(.6, function()
-        win:moveToScreen(displays[d], false, true)
+        win:moveToScreen(display(), false, true)
         win:setFullScreen(true)
       end)
     else
-      win:moveToScreen(displays[d], false, true)
+      win:moveToScreen(display(), false, true)
     end
   end
 end
 
-hs.hotkey.bind(hyper, "1", moveWindowToDisplay(1))
-hs.hotkey.bind(hyper, "2", moveWindowToDisplay(2))
-hs.hotkey.bind(hyper, "3", moveWindowToDisplay(3))
-hs.hotkey.bind(hyper, "4", moveWindowToDisplay(4))
+function destinationScreen(direction)
+  return function()
+    local win = hs.window.focusedWindow()
+    local screen = win:screen()
+
+    if(direction == "north")
+    then
+      return screen:toNorth()
+    elseif(direction == "south")
+    then
+      return screen:toSouth()
+    elseif(direction == "east")
+    then
+      return screen:toEast()
+    elseif(direction == "west")
+    then
+      return screen:toWest()
+    end
+
+    return nil
+  end
+end
+
+hs.hotkey.bind(shift_hyper, "up", moveWindowToDisplay(destinationScreen("north")))
+hs.hotkey.bind(shift_hyper, "down", moveWindowToDisplay(destinationScreen("south")))
+hs.hotkey.bind(shift_hyper, "left", moveWindowToDisplay(destinationScreen("west")))
+hs.hotkey.bind(shift_hyper, "right", moveWindowToDisplay(destinationScreen("east")))
 
 -- Full Screen
 
