@@ -81,6 +81,9 @@ brew 'zeromq'
 brew 'zlib'
 brew 'zsh'
 
+tap 'jakehilborn/jakehilborn'
+brew 'jakehilborn/jakehilborn/displayplacer'
+
 tap 'heroku/brew'
 brew 'heroku'
 
