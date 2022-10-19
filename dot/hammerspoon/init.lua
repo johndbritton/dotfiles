@@ -28,7 +28,7 @@ end)
 appKeys = {
   b = "Safari",
   c = "Fantastical",
-  e = "Atom Nightly",
+  e = "Visual Studio Code",
   f = "Finder",
   t = "Terminal",
   s = "Slack",

@@ -3,7 +3,7 @@
 if [ $# -eq 0 ]; then
   cd ~/.dotfiles
 elif [ $1 = 'edit' ]; then
-  (${VISUAL:-${EDITOR:-vi}} "~/.dotfiles")
+  (${VISUAL:-${EDITOR:-vi}} ~/.dotfiles)
 elif [ $1 = 'pull' ]; then
   (git -C ~/.dotfiles pull --rebase --autostash)
 elif [ $1 = 'reload' ]; then
