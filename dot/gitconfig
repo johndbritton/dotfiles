@@ -1,6 +1,6 @@
 [core]
 	autocrlf = input
-	editor = atom -w
+	editor = code -w
 	excludesfile = ~/.gitignore
 [alias]
 	branch-name = rev-parse --abbrev-ref HEAD
