@@ -2,6 +2,8 @@
 
 if [ $1 = 'toggle' ] && [ $2 = 'study-light' ]; then
   hass-cli service call light.toggle --arguments entity_id=light.study_light,transition=15
+elif [ $1 = 'toggle' ] && [ $2 = 'study-key-lights' ]; then
+  hass-cli service call light.toggle --arguments entity_id=light.study_key_lights
 else
   echo 'Usage:'
   echo '  office toggle <device>'

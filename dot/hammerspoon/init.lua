@@ -80,6 +80,10 @@ hs.hotkey.bind(hyper, "l", function()
   hs.execute("home-assistant toggle study-light", true)
 end)
 
+hs.hotkey.bind(hyper, "k", function()
+  hs.execute("home-assistant toggle study-key-lights", true)
+end)
+
 -- Multiple Monitors
 
 function moveWindowToDisplay(display)
