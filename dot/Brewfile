@@ -86,9 +86,6 @@ brew 'zsh'
 tap 'jakehilborn/jakehilborn'
 brew 'jakehilborn/jakehilborn/displayplacer'
 
-tap 'heroku/brew'
-brew 'heroku'
-
 tap 'nodenv/nodenv'
 brew 'nodenv/nodenv/nodenv-default-packages'
 
