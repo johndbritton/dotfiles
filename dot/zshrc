@@ -8,3 +8,6 @@ fi
 
 # # Add ~/bin and homebrew to PATH
 export PATH="$HOME/bin:/opt/workbrew/bin:/opt/homebrew/sbin:/opt/homebrew/bin:$PATH"
+
+# Use `mcfly` for better history - https://github.com/cantino/mcfly
+eval "$(mcfly init zsh)"
