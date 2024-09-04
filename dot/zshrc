@@ -8,3 +8,5 @@ fi
 
 # # Add ~/bin and homebrew to PATH
 export PATH="$HOME/bin:/opt/workbrew/bin:/opt/homebrew/sbin:/opt/homebrew/bin:$PATH"
+
+eval "$(atuin init zsh)"
