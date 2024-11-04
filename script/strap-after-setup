@@ -6,6 +6,5 @@ sudo xcodebuild -license accept
 
 # Ensure preferred language versions are installed
 rbenv install -s $(cat ~/.rbenv/version)
-# Disabling until https://github.com/pyenv/pyenv/issues/1643 is resolved
-# pyenv install -s $(cat ~/.pyenv/version)
+pyenv install -s $(cat ~/.pyenv/version)
 nodenv install -s $(cat ~/.nodenv/version)
