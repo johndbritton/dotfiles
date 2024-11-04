@@ -92,9 +92,6 @@ brew 'jakehilborn/jakehilborn/displayplacer'
 tap 'nodenv/nodenv'
 brew 'nodenv/nodenv/nodenv-default-packages'
 
-tap "workbrew/private", "https://#{ENV.fetch("HOMEBREW_GITHUB_API_TOKEN")}@github.com/Workbrew/homebrew-private"
-brew 'workbrew'
-
 cask '1password'
 cask 'abyssoft-teleport'
 cask 'airflow'
