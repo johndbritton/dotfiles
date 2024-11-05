@@ -3,7 +3,7 @@
 declare -a apps=(
   "1Password"
   "Amphetamine"
-  "Bartender 4"
+  "Bartender 5"
   "Bear"
   "BeardedSpice"
   "Choosy"
@@ -11,9 +11,11 @@ declare -a apps=(
   "Gitify"
   "Hammerspoon"
   "Home Assistant"
-  "Homie"
   "Itsycal"
+  "Lunar"
+  "Raycast"
   "Shifty"
+  "SoundSource"
   "Tailscale"
   "Yoink"
 )
