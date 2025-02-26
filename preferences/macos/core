@@ -35,4 +35,7 @@ defaults write com.apple.systemsound "com.apple.sound.uiaudio.enabled" -int 0
 # Disable click wallpaper to reveal desktop
 defaults write com.apple.WindowManager EnableStandardClickToShowDesktop -bool false
 
+# Hide all icons on the Desktop
+defaults write com.apple.finder "CreateDesktop" -bool "false"
+
 echo 'Configured Core preferences'
