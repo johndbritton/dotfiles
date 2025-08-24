@@ -1,12 +1,84 @@
--- Preferences
+-- Luarocks
+require("luarocks.loader")
+-- local pkg = require("pkg")
 
-hs.autoLaunch(false)
+-- Preferences
+hs.autoLaunch(true)
 hs.automaticallyCheckForUpdates(true)
 hs.dockIcon(false)
 hs.menuIcon(true)
 hs.consoleOnTop(true)
 hs.uploadCrashData(false)
 hs.screen.strictScreenInDirection = true
+
+-- -- PrimaryLG ULTRAWIDE (0x600002f7ba78)
+-- -- AC4DE6BB-7F13-4012-BE6D-75C309E16830
+-- ultrawideScreen = hs.screen.find("AC4DE6BB-7F13-4012-BE6D-75C309E16830")
+
+-- -- Laptop Built-in Retina Display (0x600002f79138)
+-- -- 2023-07-13 12:32:43: 37D8832A-2D66-02CA-B9F7-8F30A301B230
+-- builtinScreen = hs.screen.find("37D8832A-2D66-02CA-B9F7-8F30A301B230")
+
+-- -- Left LG UltraFine (1) (0x600002f79c78)
+-- -- 2023-07-13 12:32:43: AC03558F-98A0-4D24-BCB4-6577A6D53405
+-- leftScreen = hs.screen.find("AC03558F-98A0-4D24-BCB4-6577A6D53405")
+
+-- -- Right LG UltraFine (2) (0x600002f79db8)
+-- -- 2023-07-13 12:32:43: FF96DF0D-5C57-43E6-A1D7-1E90F06F6B86
+-- rightScreen = hs.screen.find("FF96DF0D-5C57-43E6-A1D7-1E90F06F6B86")
+
+-- caffeinateWatcher = hs.caffeinate.watcher.new(function (eventType)
+--   if (eventType == hs.caffeinate.watcher.screensDidWake)
+--   then
+--     hs.timer.doAfter(2, function()
+
+-- spotify = hs.application.get("Spotify"):mainWindow()
+-- if(spotify:isFullScreen())
+-- then
+--   spotify:setFullScreen(false)
+--   hs.timer.doAfter(.6, function()
+--     spotify:moveToScreen(builtinScreen, false, true)
+--     spotify:setFullScreen(true)
+--   end)
+-- else
+--   spotify:moveToScreen(builtinScreen, false, true)
+--   spotify:setFullScreen(true)
+
+-- end
+
+-- fantastical = hs.application.get("Fantastical"):mainWindow()
+-- if(fantastical:isFullScreen())
+-- then
+--   fantastical:setFullScreen(false)
+--   hs.timer.doAfter(.6, function()
+--     fantastical:moveToScreen(builtinScreen, false, true)
+--     fantastical:setFullScreen(true)
+--   end)
+-- else
+--   fantastical:moveToScreen(builtinScreen, false, true)
+--   fantastical:setFullScreen(true)
+
+-- end
+
+-- slack = hs.application.get("Slack"):mainWindow()
+-- if(slack:isFullScreen())
+-- then
+--   slack:setFullScreen(false)
+--   hs.timer.doAfter(.6, function()
+--     slack:moveToScreen(builtinScreen, false, true)
+--     slack:setFullScreen(true)
+--   end)
+-- else
+--   slack:moveToScreen(builtinScreen, false, true)
+--   slack:setFullScreen(true)
+-- end
+
+
+-- end)
+
+--   end
+-- end)
+-- caffeinateWatcher:start()
 
 -- Key Combos
 
@@ -26,7 +98,7 @@ end)
 -- Global Applications
 
 appKeys = {
-  b = "Safari",
+  b = "Arc",
   c = "Fantastical",
   e = "Visual Studio Code",
   f = "Finder",
@@ -80,7 +152,7 @@ hs.hotkey.bind(hyper, "l", function()
   hs.execute("home-assistant toggle study-light", true)
 end)
 
-hs.hotkey.bind(hyper, "k", function()
+hs.hotkey.bind(hyper, "k", function() -- key lights
   hs.execute("home-assistant toggle study-key-lights", true)
 end)
 
@@ -104,12 +176,18 @@ function moveWindowToDisplay(display)
     else
       win:moveToScreen(display(), false, true)
     end
+    win:focus()
   end
 end
 
 function destinationScreen(direction)
   return function()
     local win = hs.window.focusedWindow()
+    if(win == nil)
+    then
+      return
+    end
+
     local screen = win:screen()
 
     if(direction == "north")
@@ -134,6 +212,10 @@ hs.hotkey.bind(shift_hyper, "up", moveWindowToDisplay(destinationScreen("north")
 hs.hotkey.bind(shift_hyper, "down", moveWindowToDisplay(destinationScreen("south")))
 hs.hotkey.bind(shift_hyper, "left", moveWindowToDisplay(destinationScreen("west")))
 hs.hotkey.bind(shift_hyper, "right", moveWindowToDisplay(destinationScreen("east")))
+
+hs.hotkey.bind(hyper, "r", function()
+  hs.execute("office display desk", true)
+end)
 
 -- Full Screen
 
@@ -222,7 +304,7 @@ hs.hotkey.bind(hyper, "/", function()
 end)
 
 -- Hold cmd + q to quit
-cmdQDelay = 2
+cmdQDelay = 1
 
 cmdQTimer = nil
 cmdQAlert = nil
