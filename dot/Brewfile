@@ -142,8 +142,6 @@ cask 'vmware-fusion'
 cask 'webtorrent'
 cask 'zoom'
 
-tap 'homebrew/cask-versions'
-
 mas '1Password for Safari', id: 1569813296
 mas 'Adguard for Safari', id: 1440147259
 mas 'Affinity Designer', id: 824171161
