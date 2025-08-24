@@ -1,5 +1,3 @@
-brew tap 'homebrew/core'
-
 brew 'autoconf'
 brew 'automake'
 brew 'atuin'
