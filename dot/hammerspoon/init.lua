@@ -11,8 +11,7 @@ hs.screen.strictScreenInDirection = true
 -- System Wake Watcher
 
 function caffeinateCallback(eventType)
-  if eventType == hs.caffeinate.watcher.systemDidWake then
-    hs.logger.new('caffeinate', 'debug'):d('System woke up, running office display spain')
+  if eventType == hs.caffeinate.watcher.screensDidWake then
     hs.execute("office display spain", true)
   end
 end
