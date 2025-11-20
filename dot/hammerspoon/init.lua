@@ -8,6 +8,18 @@ hs.consoleOnTop(true)
 hs.uploadCrashData(false)
 hs.screen.strictScreenInDirection = true
 
+-- System Wake Watcher
+
+function caffeinateCallback(eventType)
+  if eventType == hs.caffeinate.watcher.systemDidWake then
+    hs.logger.new('caffeinate', 'debug'):d('System woke up, running office display spain')
+    hs.execute("office display spain", true)
+  end
+end
+
+caffeinateWatcher = hs.caffeinate.watcher.new(caffeinateCallback)
+caffeinateWatcher:start()
+
 -- Key Combos
 
 hyper = {"⌘", "⌃", "⌥"}

@@ -1,8 +1,10 @@
 #!/bin/zsh
 
-if [ $1 = 'display' ] && [ $2 = 'desk' ]; then
+if [ "$1" = 'display' ] && [ "$2" = 'desk' ]; then
   displayplacer "id:AC4DE6BB-7F13-4012-BE6D-75C309E16830 res:3200x1350 hz:72 color_depth:7 scaling:on origin:(0,0) degree:0" "id:37D8832A-2D66-02CA-B9F7-8F30A301B230 res:1728x1117 hz:120 color_depth:8 scaling:on origin:(740,1350) degree:0" "id:FF96DF0D-5C57-43E6-A1D7-1E90F06F6B86 res:1440x2560 hz:60 color_depth:8 scaling:on origin:(3200,-584) degree:90" "id:AC03558F-98A0-4D24-BCB4-6577A6D53405 res:1440x2560 hz:60 color_depth:8 scaling:on origin:(-1440,-576) degree:270"
+elif [ "$1" = 'display' ] && [ "$2" = 'spain' ]; then
+  displayplacer "id:66270051-1F9F-4C67-96B2-3FEE149BB3D1 res:2560x1440 hz:60 color_depth:8 enabled:true scaling:on origin:(0,0) degree:0" "id:37D8832A-2D66-02CA-B9F7-8F30A301B230 res:1728x1117 hz:120 color_depth:8 enabled:true scaling:on origin:(377,1440) degree:0" "id:2E94EDD0-5B60-4B38-A0B3-BFD8E3226BDB res:1440x2560 hz:60 color_depth:8 enabled:true scaling:on origin:(-1440,-536) degree:90" "id:0EA00912-0154-405E-A668-202E0A34003E res:1440x2560 hz:60 color_depth:8 enabled:true scaling:on origin:(2560,-569) degree:270"
 else
   echo 'Usage:'
-  echo '  office display desk'
+  echo '  office display <desk|spain>'
 fi
