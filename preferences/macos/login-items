@@ -7,7 +7,6 @@ declare -a apps=(
   "Bear"
   "BeardedSpice"
   "Choosy"
-  "ExpressVPN"
   "Gitify"
   "Hammerspoon"
   "Itsycal"
