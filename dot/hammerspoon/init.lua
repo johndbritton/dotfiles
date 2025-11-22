@@ -19,6 +19,9 @@ end
 caffeinateWatcher = hs.caffeinate.watcher.new(caffeinateCallback)
 caffeinateWatcher:start()
 
+-- Initial Display Setup
+hs.execute("office display spain", true)
+
 -- Key Combos
 
 hyper = {"⌘", "⌃", "⌥"}
