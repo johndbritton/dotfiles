@@ -3,7 +3,6 @@
 declare -a apps=(
   "Amphetamine"
   "Bartender 6"
-  "Bear"
   "BeardedSpice"
   "Hammerspoon"
   "Itsycal"
