@@ -5,7 +5,6 @@ declare -a apps=(
   "Bartender 6"
   "Bear"
   "BeardedSpice"
-  "Choosy"
   "Hammerspoon"
   "Itsycal"
   "Lunar"
