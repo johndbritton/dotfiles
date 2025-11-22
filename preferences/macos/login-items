@@ -3,7 +3,7 @@
 declare -a apps=(
   "1Password"
   "Amphetamine"
-  "Bartender 5"
+  "Bartender 6"
   "Bear"
   "BeardedSpice"
   "Choosy"
