@@ -6,7 +6,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# # Add ~/bin and homebrew to PATH
-export PATH="$HOME/bin:/opt/workbrew/bin:/opt/homebrew/sbin:/opt/homebrew/bin:$PATH"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Add ~/bin to PATH
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
 eval "$(atuin init zsh)"
