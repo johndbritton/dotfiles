@@ -95,28 +95,28 @@ hs.hotkey.bind(hyper, "l", function()
 end)
 
 hs.hotkey.bind(hyper, "k", function()
-  hs.execute("home-assistant toggle study-key-lights", true)
+  hs.execute("home-assistant toggle despacho-key-lights", true)
 end)
 
 -- Multiple Monitors
 
 function moveWindowToDisplay(display)
   return function()
-    if(display() == nil)
-    then
-      return
-    end
+    local target = display()
+    if not target then return end
 
     local win = hs.window.focusedWindow()
-    if(win:isFullScreen())
-    then
+    if not win then return end
+
+    if(win:isFullScreen()) then
       win:setFullScreen(false)
       hs.timer.doAfter(.6, function()
-        win:moveToScreen(display(), false, true)
+        win:moveToScreen(target, false, true)
         win:setFullScreen(true)
       end)
+      return
     else
-      win:moveToScreen(display(), false, true)
+      win:moveToScreen(target, false, true)
     end
   end
 end
@@ -124,23 +124,20 @@ end
 function destinationScreen(direction)
   return function()
     local win = hs.window.focusedWindow()
+    if not win then return nil end
+
     local screen = win:screen()
+    if not screen then return nil end
 
-    if(direction == "north")
-    then
-      return screen:toNorth()
-    elseif(direction == "south")
-    then
-      return screen:toSouth()
-    elseif(direction == "east")
-    then
-      return screen:toEast()
-    elseif(direction == "west")
-    then
-      return screen:toWest()
-    end
+    local dirs = {
+      north = screen.toNorth,
+      south = screen.toSouth,
+      east = screen.toEast,
+      west = screen.toWest,
+    }
 
-    return nil
+    local fn = dirs[direction]
+    return fn and fn(screen) or nil
   end
 end
 
